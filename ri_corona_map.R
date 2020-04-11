@@ -8,7 +8,7 @@ par(mar=c(0,0,0,0))
 plot(RI)
 
 #get coronavirus data
-cov<-read.csv("datasets/covid_2020-04-07.2.csv",header=T, stringsAsFactors = F)
+cov<-read.csv("datasets/covid_2020-04-09.csv",header=T, stringsAsFactors = F)
 #all "<5" temp set to 3
 cov$Number.cont<-cov$Number
 cov$Number.cont[cov$Number=="<5"]<-"3"
@@ -83,7 +83,7 @@ plot(RI,col=RI$col)
 par(mar=c(2,0,0,0))
 direct="./"
 
-plot.call<-c("plot(RI,col=RI$col,main='RI COVID-19 Cases by Town',cex.main=2,xlab='April 7, 2020',cex.lab=3)")
+plot.call<-c("plot(RI,col=RI$col,main='RI COVID-19 Cases by Town',cex.main=2,xlab='April 9, 2020',cex.lab=3)")
 plot.extras<-c("legend('topright',leg.text,fill=colors,cex=2,bty='n')")
 
 #get annotations
