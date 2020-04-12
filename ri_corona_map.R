@@ -17,8 +17,8 @@ cov$Number.cont<-as.numeric(as.character(cov$Number.cont))
 library("sendplot")
 
 #create colors for heatmap
-cov$colorBuckets <- as.numeric(cut(cov$Number.cont,c(-1,2,5,10,25,50,75,100,150,Inf)))
-n<-length(c(-1,2,5,10,25,50,75,100,150,Inf))
+cov$colorBuckets <- as.numeric(cut(cov$Number.cont,c(-1,2,5,10,25,50,75,100,150,200,300,400,500,Inf)))
+n<-length(c(-1,2,5,10,25,50,75,100,150,200,300,400,500,Inf))
 colors = heat.colors(n, alpha = 1)
 #switch around
 colors<-colors[seq(n,1)]
@@ -35,7 +35,7 @@ RI$col<-cov$col.names[idmatch]
 plot(RI,col=RI$col)
 #legend
 
-leg.text<-c("0","1-5","5-9","10-25","25-50","50-75","75-100","100-150",">150")
+leg.text<-c("0","1-5","5-9","10-25","25-50","50-75","75-100","100-150","150-200","200-300","300-400","400-500",">500")
 legend("topright",leg.text,fill=colors,cex=.9,bty="n")
 
 #add the interactive elements
